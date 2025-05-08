@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="game.css">
+    <script src="src/memo.js" defer></script>
+    <title>Memory Game</title>
+</head>
+<body>
+    <h1>Memory Game</h1>
+    <h2> <span id="timer">2:00</span> seconds</h2>
+
+    <div class="vicup" id="vicup" style="display: none;"> 
+        <img src="img/victory.PNG" alt="" width="50px" height="50px" class="victory"  >
+        <h3>Victory</h3>
+      </div>
+
+    <div class="popup" id="popup" style="display: none;"> 
+      <img src="img/defeat.PNG" alt="" width="50px" height="50px" class="defeat"  >
+      <h3>Defeat</h3>
+    </div>
+
+    <div class="container" >
+        <!-- Card 1 -->
+        <div class="card" data-card="carrot">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="img/front3.PNG" alt="Front Image">
+                </div>
+                <div class="card-back" data-card="carrot">
+                    <img src="img/carrot.PNG" alt="Back Image">
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card" data-card="melon">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="img/front3.PNG" alt="Front Image">
+                </div>
+                <div class="card-back">
+                    <img src="img/melon.PNG" alt="Back Image">
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card" data-card="mg">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="img/front3.PNG" alt="Front Image">
+                </div>
+                <div class="card-back">
+                    <img src="img/mg.PNG" alt="Back Image">
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card" data-card="onion">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="img/front3.PNG" alt="Front Image">
+                </div>
+                <div class="card-back">
+                    <img src="img/onion.PNG" alt="Back Image">
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="card" data-card="rose">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="img/front3.PNG" alt="Front Image">
+                </div>
+                <div class="card-back">
+                    <img src="img/rose.PNG" alt="Back Image">
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card" data-card="seed">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="img/front3.PNG" alt="Front Image">
+                </div>
+                <div class="card-back">
+                    <img src="img/seed.PNG" alt="Back Image">
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="card" data-card="sun">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="img/front3.PNG" alt="Front Image">
+                </div>
+                <div class="card-back">
+                    <img src="img/sun.PNG" alt="Back Image">
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="card" data-card="wheat">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="img/front3.PNG" alt="Front Image">
+                </div>
+                <div class="card-back">
+                    <img src="img/wheat.PNG" alt="Back Image">
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="card" data-card="carrot">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="img/front3.PNG" alt="Front Image">
+                </div>
+                <div class="card-back">
+                    <img src="img/carrot.PNG" alt="Back Image">
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 10 -->
+        <div class="card" data-card="melon">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="img/front3.PNG" alt="Front Image">
+                </div>
+                <div class="card-back">
+                    <img src="img/melon.PNG" alt="Back Image">
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 11 -->
+        <div class="card" data-card="mg">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="img/front3.PNG" alt="Front Image">
+                </div>
+                <div class="card-back">
+                    <img src="img/mg.PNG" alt="Back Image">
+                </div>
+            </div>
+        </div>
+
+       
+        <div class="card" data-card="onion" >
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="img/front3.PNG" alt="Front Image">
+                </div>
+                <div class="card-back">
+                    <img src="img/onion.PNG" alt="Back Image">
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 13 -->
+        <div class="card" data-card="rose">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="img/front3.PNG" alt="Front Image">
+                </div>
+                <div class="card-back">
+                    <img src="img/rose.PNG" alt="Back Image">
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 14 -->
+        <div class="card" data-card="seed">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="img/front3.PNG" alt="Front Image">
+                </div>
+                <div class="card-back">
+                    <img src="img/seed.PNG" alt="Back Image">
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 15 -->
+        <div class="card" data-card="sun">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="img/front3.PNG" alt="Front Image">
+                </div>
+                <div class="card-back">
+                    <img src="img/sun.PNG" alt="Back Image">
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 16 -->
+        <div class="card" data-card="wheat">
+            <div class="card-inner">
+                <div class="card-front">
+                    <img src="img/front3.PNG" alt="Front Image">
+                </div>
+                <div class="card-back">
+                    <img src="img/wheat.PNG" alt="Back Image">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
